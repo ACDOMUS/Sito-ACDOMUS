@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -10,7 +11,6 @@
 content="AC DOMUS ROMA - appartamento nel cuore di Roma, zona Ostiense.">
 
 <style>
-
 :root {
     --petrolio: #174c4b;
     --petrolio-scuro: #103837;
@@ -31,6 +31,7 @@ content="AC DOMUS ROMA - appartamento nel cuore di Roma, zona Ostiense.">
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
@@ -54,9 +55,7 @@ button {
     font-family: inherit;
 }
 
-/* =========================
-   NAVBAR
-   ========================= */
+/* NAVBAR */
 
 .navbar {
     position: fixed;
@@ -121,9 +120,7 @@ button {
     cursor: pointer;
 }
 
-/* =========================
-   HERO
-   ========================= */
+/* HERO */
 
 .hero {
     min-height: 100vh;
@@ -133,7 +130,6 @@ button {
     justify-content: center;
     text-align: center;
     color: white;
-
     background:
         linear-gradient(
             rgba(16,56,55,.46),
@@ -170,9 +166,7 @@ button {
     line-height: 1.5;
 }
 
-/* =========================
-   BUTTONS
-   ========================= */
+/* PULSANTI */
 
 .button {
     display: inline-block;
@@ -214,9 +208,7 @@ button {
     color: var(--petrolio);
 }
 
-/* =========================
-   GENERALE
-   ========================= */
+/* GENERALE */
 
 .container {
     max-width: 1160px;
@@ -234,7 +226,7 @@ button {
 
 .section-heading {
     max-width: 720px;
-    margin: auto auto 55px;
+    margin: 0 auto 55px;
     text-align: center;
 }
 
@@ -251,9 +243,7 @@ button {
     font-size: 17px;
 }
 
-/* =========================
-   BENVENUTI
-   ========================= */
+/* BENVENUTI */
 
 .intro {
     background: var(--crema);
@@ -294,9 +284,7 @@ button {
     margin-bottom: 18px;
 }
 
-/* =========================
-   GALLERIA
-   ========================= */
+/* GALLERIA */
 
 .gallery {
     background: var(--petrolio);
@@ -385,9 +373,7 @@ button {
     color: var(--petrolio);
 }
 
-/* =========================
-   COMFORT
-   ========================= */
+/* COMFORT */
 
 .details {
     background: var(--crema-chiaro);
@@ -426,9 +412,7 @@ button {
     font-size: 12px;
 }
 
-/* =========================
-   RECENSIONI
-   ========================= */
+/* RECENSIONI */
 
 .reviews {
     background: var(--petrolio);
@@ -461,9 +445,7 @@ button {
     flex-wrap: wrap;
 }
 
-/* =========================
-   POSIZIONE
-   ========================= */
+/* POSIZIONE */
 
 .location {
     background: var(--crema-chiaro);
@@ -512,48 +494,8 @@ button {
     height: 450px;
     border: 0;
 }
-<!--
-/* =========================
-   VIVI LA CITTÀ
-   ========================= */
 
-.experience {
-    background: var(--crema);
-    padding: 105px 25px;
-}
-
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.experience-card {
-    background: white;
-    padding: 38px 30px;
-    text-align: center;
-}
-
-.experience-card .icon {
-    font-size: 27px;
-    margin-bottom: 15px;
-}
-
-.experience-card h3 {
-    color: var(--petrolio);
-    font-size: 23px;
-    font-weight: 500;
-    margin-bottom: 12px;
-}
-
-.experience-card p {
-    color: var(--grigio);
-    font-size: 15px;
-}
--->
-/* =========================
-   PRENOTAZIONE
-   ========================= */
+/* PRENOTAZIONE */
 
 .cta {
     background: var(--terracotta);
@@ -575,9 +517,7 @@ button {
     font-size: 18px;
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+/* FOOTER */
 
 footer {
     background: var(--petrolio-scuro);
@@ -602,15 +542,17 @@ footer {
     margin-bottom: 22px;
 }
 
+.footer-links a:hover {
+    opacity: .7;
+}
+
 .copyright {
     color: rgba(255,255,255,.5);
     font-family: Arial, sans-serif;
     font-size: 11px;
 }
 
-/* =========================
-   LIGHTBOX
-   ========================= */
+/* LIGHTBOX */
 
 .lightbox {
     display: none;
@@ -621,6 +563,7 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 25px;
+    cursor: zoom-out;
 }
 
 .lightbox.active {
@@ -644,9 +587,7 @@ footer {
     cursor: pointer;
 }
 
-/* =========================
-   MOBILE
-   ========================= */
+/* TABLET E MOBILE */
 
 @media (max-width: 850px) {
 
@@ -685,10 +626,6 @@ footer {
 
     .details-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .experience-grid {
-        grid-template-columns: 1fr;
     }
 
     .gallery-item {
@@ -737,7 +674,6 @@ footer {
     .details,
     .reviews,
     .location,
-    .experience,
     .cta {
         padding-top: 70px;
         padding-bottom: 70px;
@@ -779,790 +715,531 @@ footer {
         text-align: center;
     }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- =========================
-     NAVBAR
-     ========================= -->
+<!-- NAVBAR -->
 
 <nav class="navbar">
+    <div class="nav-container">
 
-<div class="nav-container">
+        <a href="#home" class="logo">
+            AC DOMUS ROMA
+            <span class="logo-small">ROMA · OSTIENSE</span>
+        </a>
 
-    <a href="#home" class="logo">
-        AC DOMUS ROMA
-        <span class="logo-small">ROMA · OSTIENSE</span>
-    </a>
+        <button
+            class="menu-button"
+            id="menuButton"
+            type="button"
+            aria-label="Apri il menu"
+            aria-expanded="false"
+            aria-controls="navLinks"
+        >
+            ☰
+        </button>
 
-    <button
-        class="menu-button"
-        onclick="toggleMenu()"
-        aria-label="Apri il menu"
-    >
-        ☰
-    </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#casa">Benvenuti</a></li>
+            <li><a href="#galleria">La casa</a></li>
+            <li><a href="#comfort">Comfort</a></li>
+            <li><a href="#recensioni">Recensioni</a></li>
+            <li><a href="#posizione">Posizione</a></li>
+            <li>
+                <a href="#prenota" class="nav-book">PRENOTA</a>
+            </li>
+        </ul>
 
-    <ul class="nav-links" id="navLinks">
-
-        <li>
-            <a href="#casa">Benvenuti</a>
-        </li>
-
-        <li>
-            <a href="#galleria">La casa</a>
-        </li>
-
-        <li>
-            <a href="#comfort">Comfort</a>
-        </li>
-
-        <li>
-            <a href="#recensioni">Recensioni</a>
-        </li>
-
-        <li>
-            <a href="#posizione">Posizione</a>
-        </li>
-
-        <li>
-            <a href="#esperienza">Vivi la città</a>
-        </li>
-        
-        <li>
-            <a href="#prenota" class="nav-book">
-                PRENOTA
-            </a>
-        </li>
-
-    </ul>
-
-</div>
-
+    </div>
 </nav>
 
-
-<!-- =========================
-     HERO
-     ========================= -->
+<!-- HERO -->
 
 <header class="hero" id="home">
+    <div class="hero-content">
 
-<div class="hero-content">
-
-    <div class="hero-kicker">
-        Roma · Ostiense
-    </div>
-
-    <h1>
-        AC DOMUS ROMA
-    </h1>
-
-    <p class="hero-description">
-        Una casa elegante e accogliente nel cuore di Roma,
-        pensata per vivere la città con tutto il comfort di casa.
-    </p>
-
-    <!-- PULSANTE PRENOTA CON NOI -->
-    <a href="#prenota" class="button button-terracotta">
-        PRENOTA CON NOI
-    </a>
-
-</div>
-
-</header>
-
-
-<!-- =========================
-     BENVENUTI
-     FOTO 2
-     ========================= -->
-
-<section class="intro" id="casa">
-
-<div class="container">
-
-<div class="intro-grid">
-
-    <div class="intro-photo">
-
-        <img
-            src="foto2.jpg"
-            alt="Soggiorno AC DOMUS ROMA"
-        >
-
-    </div>
-
-    <div class="intro-text">
-
-        <div class="eyebrow">
-            Benvenuti
+        <div class="hero-kicker">
+            Roma · Ostiense
         </div>
 
+        <h1>AC DOMUS ROMA</h1>
+
+        <p class="hero-description">
+            Una casa elegante e accogliente nel cuore di Roma,
+            pensata per vivere la città con tutto il comfort di casa.
+        </p>
+
+        <a href="#prenota" class="button button-terracotta">
+            PRENOTA CON NOI
+        </a>
+
+    </div>
+</header>
+
+<!-- BENVENUTI -->
+
+<section class="intro" id="casa">
+    <div class="container">
+        <div class="intro-grid">
+
+            <div class="intro-photo">
+                <img
+                    src="foto2.jpg"
+                    alt="Soggiorno AC DOMUS ROMA"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="intro-text">
+
+                <div class="eyebrow">Benvenuti</div>
+
+                <h2>Una casa romana da vivere</h2>
+
+                <p>
+                    Benvenuti ad AC DOMUS ROMA, un appartamento
+                    pensato per vivere Roma con il comfort,
+                    l'eleganza e l'atmosfera di una vera casa.
+                </p>
+
+                <p>
+                    Gli ambienti sono spaziosi e accoglienti,
+                    ideali per una vacanza in famiglia, un viaggio
+                    con amici o un soggiorno nella capitale.
+                </p>
+
+                <p>
+                    La posizione nella zona Ostiense permette di
+                    scoprire Roma e di raggiungere facilmente
+                    numerose attrazioni e quartieri della città.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERIA -->
+
+<section class="gallery" id="galleria">
+    <div class="container">
+
+        <div class="section-heading">
+            <div class="eyebrow">La casa</div>
+
+            <h2>Scopri AC DOMUS ROMA</h2>
+
+            <p>
+                Scorri le foto per scoprire gli ambienti che ti aspettano.
+            </p>
+        </div>
+
+        <div class="gallery-slider">
+
+            <button
+                class="gallery-arrow"
+                type="button"
+                onclick="scrollGallery(-1)"
+                aria-label="Foto precedenti"
+            >
+                ‹
+            </button>
+
+            <div class="gallery-grid" id="galleryGrid">
+
+                <div
+                    class="gallery-item"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Ingrandisci foto camera 1"
+                    onclick="openLightbox('foto3.jpg')"
+                    onkeydown="galleryKeydown(event, 'foto3.jpg')"
+                >
+                    <img src="foto3.jpg" alt="Camera da letto" loading="lazy">
+                    <span class="gallery-caption">Camera 1</span>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Ingrandisci foto camera 2"
+                    onclick="openLightbox('foto4.jpg')"
+                    onkeydown="galleryKeydown(event, 'foto4.jpg')"
+                >
+                    <img src="foto4.jpg" alt="Seconda camera" loading="lazy">
+                    <span class="gallery-caption">Camera 2</span>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Ingrandisci foto cucina"
+                    onclick="openLightbox('foto5.jpg')"
+                    onkeydown="galleryKeydown(event, 'foto5.jpg')"
+                >
+                    <img src="foto5.jpg" alt="Cucina" loading="lazy">
+                    <span class="gallery-caption">Cucina</span>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Ingrandisci foto bagno 1"
+                    onclick="openLightbox('foto6.jpg')"
+                    onkeydown="galleryKeydown(event, 'foto6.jpg')"
+                >
+                    <img src="foto6.jpg" alt="Bagno" loading="lazy">
+                    <span class="gallery-caption">Bagno 1</span>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Ingrandisci foto bagno 2"
+                    onclick="openLightbox('foto7.jpg')"
+                    onkeydown="galleryKeydown(event, 'foto7.jpg')"
+                >
+                    <img src="foto7.jpg" alt="Secondo bagno" loading="lazy">
+                    <span class="gallery-caption">Bagno 2</span>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Ingrandisci foto balcone 1"
+                    onclick="openLightbox('foto8.jpg')"
+                    onkeydown="galleryKeydown(event, 'foto8.jpg')"
+                >
+                    <img src="foto8.jpg" alt="Balcone" loading="lazy">
+                    <span class="gallery-caption">Balcone 1</span>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Ingrandisci foto balcone 2"
+                    onclick="openLightbox('foto9.jpg')"
+                    onkeydown="galleryKeydown(event, 'foto9.jpg')"
+                >
+                    <img src="foto9.jpg" alt="Secondo balcone" loading="lazy">
+                    <span class="gallery-caption">Balcone 2</span>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Ingrandisci dettaglio camera"
+                    onclick="openLightbox('foto10.jpg')"
+                    onkeydown="galleryKeydown(event, 'foto10.jpg')"
+                >
+                    <img src="foto10.jpg" alt="Dettaglio camera" loading="lazy">
+                    <span class="gallery-caption">Camera 1</span>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Ingrandisci dettaglio cucina"
+                    onclick="openLightbox('foto11.jpg')"
+                    onkeydown="galleryKeydown(event, 'foto11.jpg')"
+                >
+                    <img src="foto11.jpg" alt="Dettaglio cucina" loading="lazy">
+                    <span class="gallery-caption">Cucina</span>
+                </div>
+
+                <div
+                    class="gallery-item"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Ingrandisci piantina della casa"
+                    onclick="openLightbox('foto12.jpg')"
+                    onkeydown="galleryKeydown(event, 'foto12.jpg')"
+                >
+                    <img src="foto12.jpg" alt="Piantina della casa" loading="lazy">
+                    <span class="gallery-caption">Piantina</span>
+                </div>
+
+            </div>
+
+            <button
+                class="gallery-arrow"
+                type="button"
+                onclick="scrollGallery(1)"
+                aria-label="Foto successive"
+            >
+                ›
+            </button>
+
+        </div>
+    </div>
+</section>
+
+<!-- COMFORT -->
+
+<section class="details" id="comfort">
+    <div class="container">
+
+        <div class="section-heading">
+            <div class="eyebrow">Comfort</div>
+
+            <h2>Tutto quello che serve</h2>
+
+            <p>
+                Spazi pensati per rendere il vostro soggiorno
+                a Roma piacevole e rilassante.
+            </p>
+        </div>
+
+        <div class="details-grid">
+
+            <div class="detail">
+                <div class="detail-icon">🏠</div>
+                <strong>85 m²</strong>
+                <span>Appartamento spazioso</span>
+            </div>
+
+            <div class="detail">
+                <div class="detail-icon">🛏️</div>
+                <strong>2 camere</strong>
+                <span>Camere da letto</span>
+            </div>
+
+            <div class="detail">
+                <div class="detail-icon">🛁</div>
+                <strong>2 bagni</strong>
+                <span>Bagni completi</span>
+            </div>
+
+            <div class="detail">
+                <div class="detail-icon">🌿</div>
+                <strong>Balcone</strong>
+                <span>Area fumatori</span>
+            </div>
+
+            <div class="detail">
+                <div class="detail-icon">🍳</div>
+                <strong>Cucina</strong>
+                <span>Cucina attrezzata</span>
+            </div>
+
+            <div class="detail">
+                <div class="detail-icon">❄️</div>
+                <strong>Aria condizionata</strong>
+                <span>Comfort tutto l'anno</span>
+            </div>
+
+            <div class="detail">
+                <div class="detail-icon">📶</div>
+                <strong>Wi-Fi</strong>
+                <span>Connessione disponibile</span>
+            </div>
+
+            <div class="detail">
+                <div class="detail-icon">🚗</div>
+                <strong>Parcheggio</strong>
+                <span>Disponibilità sotto l'appartamento</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- RECENSIONI -->
+
+<section class="reviews" id="recensioni">
+    <div class="container">
+
+        <div class="eyebrow">Le vostre esperienze</div>
+
+        <h2>Leggi le recensioni</h2>
+
+        <p>
+            Vuoi sapere cosa hanno pensato gli ospiti che hanno
+            soggiornato ad AC DOMUS ROMA?
+            Consulta direttamente le recensioni sulle piattaforme.
+        </p>
+
+        <div class="platforms">
+
+            <a
+                href="https://www.booking.com/hotel/it/ac-domus-top-location-ostiense.it"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button-white"
+                style="background:#c9785f; color:white; border-color:#c9785f;"
+            >
+                RECENSIONI BOOKING
+            </a>
+
+            <a
+                href="https://airbnb.it/h/acdomus"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button-outline"
+                style="background:#c9785f; color:white; border-color:#c9785f;"
+            >
+                RECENSIONI AIRBNB
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- POSIZIONE -->
+
+<section class="location" id="posizione">
+    <div class="container">
+
+        <div class="location-grid">
+
+            <div class="location-text">
+
+                <div class="eyebrow">La posizione</div>
+
+                <h2>Roma, Ostiense</h2>
+
+                <p>
+                    AC DOMUS ROMA si trova in zona Ostiense,
+                    in una posizione ideale per vivere Roma
+                    e muoversi facilmente verso il centro.
+                </p>
+
+                <p>
+                    <strong>
+                        Piazza Giovanni da Verrazzano 42, Roma
+                    </strong>
+                </p>
+
+                <ul class="location-list">
+                    <li>📍 Piazza Giovanni da Verrazzano 42</li>
+                    <li>📍 Roma · Zona Ostiense</li>
+                    <li>📍 Vicino a Garbatella e Testaccio</li>
+                    <li>📍 Comoda per raggiungere il centro</li>
+                </ul>
+
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=Piazza%20Giovanni%20da%20Verrazzano%2042%2C%20Roma"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button-terracotta"
+                >
+                    APRI GOOGLE MAPS
+                </a>
+
+            </div>
+
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps?q=Piazza%20Giovanni%20da%20Verrazzano%2042%2C%20Roma&output=embed"
+                    loading="lazy"
+                    title="Mappa AC DOMUS ROMA"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen
+                ></iframe>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PRENOTAZIONE -->
+
+<section class="cta" id="prenota">
+    <div class="container">
+
         <h2>
-            Una casa romana da vivere
+            Il tuo soggiorno a Roma
+            <br>
+            comincia qui.
         </h2>
 
         <p>
-            Benvenuti ad AC DOMUS ROMA, un appartamento
-            pensato per vivere Roma con il comfort,
-            l'eleganza e l'atmosfera di una vera casa.
+            La prenotazione con noi ti darà diritto a prezzi
+            più vantaggiosi rispetto alle piattaforme.
+            Richiedi un preventivo per scoprire i vantaggi.
         </p>
-
-        <p>
-            Gli ambienti sono spaziosi e accoglienti,
-            ideali per una vacanza in famiglia, un viaggio
-            con amici o un soggiorno nella capitale.
-        </p>
-
-        <p>
-            La posizione nella zona Ostiense permette di
-            scoprire Roma e di raggiungere facilmente
-            numerose attrazioni e quartieri della città.
-        </p>
-
-    </div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     GALLERIA
-     FOTO 3 - FOTO 12
-     ========================= -->
-
-<section class="gallery" id="galleria">
-
-<div class="container">
-
-<div class="section-heading">
-
-    <div class="eyebrow">
-        La casa
-    </div>
-
-    <h2>
-        Scopri AC DOMUS ROMA
-    </h2>
-
-    <p>
-        Scorri le foto per scoprire gli ambienti che ti aspettano.
-    </p>
-
-</div>
-
-
-<div class="gallery-slider">
-
-    <button
-        class="gallery-arrow"
-        type="button"
-        onclick="scrollGallery(-1)"
-        aria-label="Foto precedenti"
-    >
-        ‹
-    </button>
-
-
-    <div class="gallery-grid" id="galleryGrid">
-
-        <!-- FOTO 3 -->
-        <div
-            class="gallery-item"
-            onclick="openLightbox('foto3.jpg')"
-        >
-            <img
-                src="foto3.jpg"
-                alt="Camera da letto"
-                loading="lazy"
-            >
-            <span class="gallery-caption">
-                Camera 1
-            </span>
-        </div>
-
-
-        <!-- FOTO 4 -->
-        <div
-            class="gallery-item"
-            onclick="openLightbox('foto4.jpg')"
-        >
-            <img
-                src="foto4.jpg"
-                alt="Seconda camera"
-                loading="lazy"
-            >
-            <span class="gallery-caption">
-                Camera 2
-            </span>
-        </div>
-
-
-        <!-- FOTO 5 -->
-        <div
-            class="gallery-item"
-            onclick="openLightbox('foto5.jpg')"
-        >
-            <img
-                src="foto5.jpg"
-                alt="Cucina"
-                loading="lazy"
-            >
-            <span class="gallery-caption">
-                Cucina
-            </span>
-        </div>
-
-
-        <!-- FOTO 6 -->
-        <div
-            class="gallery-item"
-            onclick="openLightbox('foto6.jpg')"
-        >
-            <img
-                src="foto6.jpg"
-                alt="Bagno"
-                loading="lazy"
-            >
-            <span class="gallery-caption">
-                Bagno 1
-            </span>
-        </div>
-
-
-        <!-- FOTO 7 -->
-        <div
-            class="gallery-item"
-            onclick="openLightbox('foto7.jpg')"
-        >
-            <img
-                src="foto7.jpg"
-                alt="Secondo bagno"
-                loading="lazy"
-            >
-            <span class="gallery-caption">
-                Bagno 2
-            </span>
-        </div>
-
-
-        <!-- FOTO 8 -->
-        <div
-            class="gallery-item"
-            onclick="openLightbox('foto8.jpg')"
-        >
-            <img
-                src="foto8.jpg"
-                alt="Balcone"
-                loading="lazy"
-            >
-            <span class="gallery-caption">
-                Balcone 1
-            </span>
-        </div>
-
-
-        <!-- FOTO 9 -->
-        <div
-            class="gallery-item"
-            onclick="openLightbox('foto9.jpg')"
-        >
-            <img
-                src="foto9.jpg"
-                alt="Balcone"
-                loading="lazy"
-            >
-            <span class="gallery-caption">
-                Balcone 2
-            </span>
-        </div>
-
-
-        <!-- FOTO 10 -->
-        <div
-            class="gallery-item"
-            onclick="openLightbox('foto10.jpg')"
-        >
-            <img
-                src="foto10.jpg"
-                alt="Dettaglio camera"
-                loading="lazy"
-            >
-            <span class="gallery-caption">
-                Camera 1
-            </span>
-        </div>
-
-
-        <!-- FOTO 11 -->
-        <div
-            class="gallery-item"
-            onclick="openLightbox('foto11.jpg')"
-        >
-            <img
-                src="foto11.jpg"
-                alt="Dettaglio cucina"
-                loading="lazy"
-            >
-            <span class="gallery-caption">
-                Cucina
-            </span>
-        </div>
-
-
-        <!-- FOTO 12 -->
-        <div
-            class="gallery-item"
-            onclick="openLightbox('foto12.jpg')"
-        >
-            <img
-                src="foto12.jpg"
-                alt="Piantina Casa"
-                loading="lazy"
-            >
-            <span class="gallery-caption">
-                Piantina
-            </span>
-        </div>
-
-    </div>
-
-
-    <button
-        class="gallery-arrow"
-        type="button"
-        onclick="scrollGallery(1)"
-        aria-label="Foto successive"
-    >
-        ›
-    </button>
-
-</div>
-
-
-<div style="text-align:center; margin-top:40px;">
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     COMFORT
-     DOPO LA GALLERIA
-     ========================= -->
-
-<section class="details" id="comfort">
-
-<div class="container">
-
-<div class="section-heading">
-
-    <div class="eyebrow">
-        Comfort
-    </div>
-
-    <h2>
-        Tutto quello che serve
-    </h2>
-
-    <p>
-        Spazi pensati per rendere il vostro soggiorno
-        a Roma piacevole e rilassante.
-    </p>
-
-</div>
-
-
-<div class="details-grid">
-
-    <div class="detail">
-        <div class="detail-icon">🏠</div>
-        <strong>85 m²</strong>
-        <span>Appartamento spazioso</span>
-    </div>
-
-    <div class="detail">
-        <div class="detail-icon">🛏️</div>
-        <strong>2 camere</strong>
-        <span>Camere da letto</span>
-    </div>
-
-    <div class="detail">
-        <div class="detail-icon">🛁</div>
-        <strong>2 bagni</strong>
-        <span>Bagni completi</span>
-    </div>
-
-    <div class="detail">
-        <div class="detail-icon">🌿</div>
-        <strong>Balcone</strong>
-        <span>Area Fumatori</span>
-    </div>
-
-    <div class="detail">
-        <div class="detail-icon">🍳</div>
-        <strong>Cucina</strong>
-        <span>Cucina attrezzata</span>
-    </div>
-
-    <div class="detail">
-        <div class="detail-icon">❄️</div>
-        <strong>Aria condizionata</strong>
-        <span>Comfort tutto l'anno</span>
-    </div>
-
-    <div class="detail">
-        <div class="detail-icon">📶</div>
-        <strong>Wi-Fi</strong>
-        <span>Connessione disponibile</span>
-    </div>
-
-    <div class="detail">
-        <div class="detail-icon">🚗</div>
-        <strong>Parcheggio</strong>
-        <span>Disponibilità sotto l'appartamento</span>
-    </div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     RECENSIONI
-     ========================= -->
-
-<section class="reviews" id="recensioni">
-
-<div class="container">
-
-    <div class="eyebrow">
-        Le vostre esperienze
-    </div>
-
-    <h2>
-        Leggi le recensioni
-    </h2>
-
-    <p>
-        Vuoi sapere cosa hanno pensato gli ospiti che hanno
-        soggiornato ad AC DOMUS ROMA?
-        Consulta direttamente le recensioni sulle piattaforme.
-    </p>
-
-    <div class="platforms">
 
         <a
-            href="https://www.booking.com/hotel/it/ac-domus-top-location-ostiense.it"
-            target="_blank"
-            rel="noopener"
-            class="button button-white" style="background:#c9785f; color:white; border-color:#c9785f;"
+            href="mailto:acdomus.roma@gmail.com?subject=Richiesta%20preventivo%20AC%20DOMUS%20ROMA"
+            class="button button-white"
         >
-            RECENSIONI BOOKING
+            RICHIEDI UN PREVENTIVO
         </a>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-logo">
+        AC DOMUS ROMA
+    </div>
+
+    <div class="footer-links">
+
+        <a href="#home">Home</a>
+        <a href="#casa">Benvenuti</a>
+        <a href="#galleria">La casa</a>
+        <a href="#comfort">Comfort</a>
+        <a href="#recensioni">Recensioni</a>
+        <a href="#posizione">Posizione</a>
 
         <a
             href="https://airbnb.it/h/acdomus"
             target="_blank"
-            rel="noopener"
-            class="button button-outline" style="background:#c9785f; color:white; border-color:#c9785f;"
+            rel="noopener noreferrer"
         >
-            RECENSIONI AIRBNB
+            Airbnb
         </a>
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     POSIZIONE
-     ========================= -->
-
-<section class="location" id="posizione">
-
-<div class="container">
-
-<div class="location-grid">
-
-    <div class="location-text">
-
-        <div class="eyebrow">
-            La posizione
-        </div>
-
-        <h2>
-            Roma, Ostiense
-        </h2>
-
-        <p>
-            AC DOMUS ROMA si trova in zona Ostiense,
-            in una posizione ideale per vivere Roma
-            e muoversi facilmente verso il centro.
-        </p>
-
-        <p>
-            <strong>
-                Piazza Giovanni da Verrazzano 42, Roma
-            </strong>
-        </p>
-
-        <ul class="location-list">
-
-            <li>
-                📍 Piazza Giovanni da Verrazzano 42
-            </li>
-
-            <li>
-                📍 Roma · Zona Ostiense
-            </li>
-
-            <li>
-                📍 Vicino a Garbatella e Testaccio
-            </li>
-
-            <li>
-                📍 Comoda per raggiungere il centro
-            </li>
-
-        </ul>
 
         <a
-            href="https://www.google.com/maps/search/?api=1&query=Piazza%20Giovanni%20da%20Verrazzano%2042%2C%20Roma"
+            href="https://www.booking.com/hotel/it/ac-domus-top-location-ostiense.it"
             target="_blank"
-            rel="noopener"
-            class="button button-terracotta"
+            rel="noopener noreferrer"
         >
-            APRI GOOGLE MAPS
+            Booking.com
         </a>
 
     </div>
 
-
-    <div class="map">
-
-        <iframe
-            src="https://www.google.com/maps?q=Piazza%20Giovanni%20da%20Verrazzano%2042%2C%20Roma&output=embed"
-            loading="lazy"
-            title="Mappa AC DOMUS ROMA"
-        ></iframe>
-
+    <div class="copyright">
+        © 2026 AC DOMUS ROMA · Roma, Italia
     </div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     VIVI LA CITTÀ
-     ========================= 
-
-<section class="experience" id="esperienza">
-
-<div class="container">
-
-<div class="section-heading">
-
-    <div class="eyebrow">
-        Roma
-    </div>
-
-    <h2>
-        Vivi la città
-    </h2>
-
-    <p>
-        Una posizione ideale per alternare la scoperta
-        di Roma al piacere di tornare a casa.
-    </p>
-
-</div>
-
-
-<div class="experience-grid">
-
-    <div class="experience-card">
-
-        <div class="icon">🏛️</div>
-
-        <h3>
-            Cultura
-        </h3>
-
-        <p>
-            Scopri la storia, l'arte e i monumenti
-            della città eterna.
-        </p>
-
-    </div>
-
-
-    <div class="experience-card">
-
-        <div class="icon">🍝</div>
-
-        <h3>
-            Sapori romani
-        </h3>
-
-        <p>
-            Ristoranti, trattorie e locali nei quartieri
-            Ostiense, Garbatella e Testaccio.
-        </p>
-
-    </div>
-
-
-    <div class="experience-card">
-
-        <div class="icon">🚇</div>
-
-        <h3>
-            Collegamenti
-        </h3>
-
-        <p>
-            Una zona strategica per muoversi
-            verso il centro e scoprire Roma.
-        </p>
-
-    </div>
-
-</div>
-
-</div>
->--
-</section>
-
-
-<!-- =========================
-     PRENOTA
-     ========================= -->
-
-<section class="cta" id="prenota">
-
-<div class="container">
-
-    <h2>
-        Il tuo soggiorno a Roma
-        <br>
-        comincia qui.
-    </h2>
-
-    <p>
-        La prenotazione con noi ti darà diritto a prezzi
-        più vantaggiosi rispetto alle piattaforme.
-        Richiedi un preventivo per scoprire i vantaggi.
-    </p>
-
-    <!-- SOSTITUISCI L'EMAIL CON LA TUA -->
-    <a
-        href="mailto:INSERISCI-LA-TUA-EMAIL"
-        class="button button-white"
-    >
-        RICHIEDI UN PREVENTIVO
-    </a>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     FOOTER
-     ========================= -->
-
-<footer>
-
-<div class="footer-logo">
-    AC DOMUS ROMA
-</div>
-
-<div class="footer-links">
-
-    <a href="#home">
-        Home
-    </a>
-
-    <a href="#casa">
-        Benvenuti
-    </a>
-
-    <a href="#galleria">
-        La casa
-    </a>
-
-    <a href="#comfort">
-        Comfort
-    </a>
-
-    <a href="#recensioni">
-        Recensioni
-    </a>
-
-    <a href="#posizione">
-        Posizione
-    </a>
-<!--
-    <a href="#esperienza">
-        Vivi la città
-    </a>
->--
-    <a
-        href="https://airbnb.it/h/acdomus"
-        target="_blank"
-        rel="noopener"
-    >
-        Airbnb
-    </a>
-
-    <a
-        href="https://www.booking.com/hotel/it/ac-domus-top-location-ostiense.it"
-        target="_blank"
-        rel="noopener"
-    >
-        Booking.com
-    </a>
-
-</div>
-
-<div class="copyright">
-    © 2026 AC DOMUS ROMA · Roma, Italia
-</div>
 
 </footer>
 
-
-<!-- =========================
-     LIGHTBOX
-     ========================= -->
+<!-- LIGHTBOX -->
 
 <div
     class="lightbox"
     id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Visualizzazione ingrandita della fotografia"
     onclick="closeLightbox()"
 >
 
-    <span class="lightbox-close">
+    <button
+        type="button"
+        class="lightbox-close"
+        aria-label="Chiudi la fotografia"
+        onclick="closeLightbox()"
+        style="background:transparent; border:0;"
+    >
         ×
-    </span>
+    </button>
 
     <img
         id="lightboxImage"
@@ -1572,83 +1249,83 @@ footer {
 
 </div>
 
-
 <script>
 
+/* MENU MOBILE */
+
+const menuButton = document.getElementById("menuButton");
+const navLinks = document.getElementById("navLinks");
+
 function toggleMenu() {
-
-    document
-        .getElementById("navLinks")
-        .classList.toggle("open");
-
+    const isOpen = navLinks.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+    menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Chiudi il menu" : "Apri il menu"
+    );
 }
 
+menuButton.addEventListener("click", toggleMenu);
 
-document
-    .querySelectorAll(".nav-links a")
-    .forEach(function(link) {
-
-        link.addEventListener("click", function() {
-
-            document
-                .getElementById("navLinks")
-                .classList.remove("open");
-
-        });
-
+document.querySelectorAll(".nav-links a").forEach(function(link) {
+    link.addEventListener("click", function() {
+        navLinks.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Apri il menu");
     });
+});
 
+/* SCORRIMENTO GALLERIA */
 
 function scrollGallery(direction) {
-
-    const gallery =
-        document.getElementById("galleryGrid");
+    const gallery = document.getElementById("galleryGrid");
 
     if (!gallery) return;
 
     gallery.scrollBy({
-
         left: direction * 310,
-
         behavior: "smooth"
-
     });
-
 }
 
+/* INGRANDIMENTO FOTOGRAFIE */
 
 function openLightbox(image) {
-
-    const lightbox =
-        document.getElementById("lightbox");
-
-    const lightboxImage =
-        document.getElementById("lightboxImage");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
 
     lightboxImage.src = image;
-
     lightbox.classList.add("active");
-
+    document.body.style.overflow = "hidden";
 }
-
 
 function closeLightbox() {
+    const lightbox = document.getElementById("lightbox");
 
-    document
-        .getElementById("lightbox")
-        .classList.remove("active");
-
+    lightbox.classList.remove("active");
+    document.body.style.overflow = "";
 }
 
+function galleryKeydown(event, image) {
+    if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openLightbox(image);
+    }
+}
+
+/* CHIUSURA LIGHTBOX */
+
+document.getElementById("lightboxImage").addEventListener(
+    "click",
+    function(event) {
+        event.stopPropagation();
+    }
+);
 
 document.addEventListener("keydown", function(event) {
-
     if (event.key === "Escape") {
-
         closeLightbox();
-
     }
-
 });
 
 </script>
