@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -495,7 +495,7 @@ button {
     border: 0;
 }
 
-/* PRENOTAZIONE */
+/* PRENOTAZIONE E EMAIL */
 
 .cta {
     background: var(--terracotta);
@@ -515,6 +515,62 @@ button {
     max-width: 650px;
     margin: 0 auto 30px;
     font-size: 18px;
+}
+
+.email-contact {
+    max-width: 560px;
+    margin: 30px auto 0;
+    padding: 28px 22px;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.45);
+    border-radius: 5px;
+}
+
+.email-label {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.email-address {
+    display: inline-block;
+    color: white;
+    font-size: clamp(18px, 4vw, 25px);
+    font-weight: bold;
+    overflow-wrap: anywhere;
+    margin-bottom: 22px;
+}
+
+.email-address:hover {
+    text-decoration: underline;
+}
+
+.email-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.email-copy {
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+}
+
+.email-copy:hover {
+    background: white;
+    color: var(--terracotta);
+}
+
+.email-note {
+    font-family: Arial, sans-serif;
+    font-size: 12px !important;
+    line-height: 1.5;
+    margin: 18px auto 0 !important;
 }
 
 /* FOOTER */
@@ -714,6 +770,14 @@ footer {
     .button {
         text-align: center;
     }
+
+    .email-buttons {
+        flex-direction: column;
+    }
+
+    .email-buttons .button {
+        width: 100%;
+    }
 }
 </style>
 </head>
@@ -849,122 +913,82 @@ footer {
 
             <div class="gallery-grid" id="galleryGrid">
 
-                <div
-                    class="gallery-item"
-                    role="button"
-                    tabindex="0"
+                <div class="gallery-item" role="button" tabindex="0"
                     aria-label="Ingrandisci foto camera 1"
                     onclick="openLightbox('foto3.jpg')"
-                    onkeydown="galleryKeydown(event, 'foto3.jpg')"
-                >
+                    onkeydown="galleryKeydown(event, 'foto3.jpg')">
                     <img src="foto3.jpg" alt="Camera da letto" loading="lazy">
                     <span class="gallery-caption">Camera 1</span>
                 </div>
 
-                <div
-                    class="gallery-item"
-                    role="button"
-                    tabindex="0"
+                <div class="gallery-item" role="button" tabindex="0"
                     aria-label="Ingrandisci foto camera 2"
                     onclick="openLightbox('foto4.jpg')"
-                    onkeydown="galleryKeydown(event, 'foto4.jpg')"
-                >
+                    onkeydown="galleryKeydown(event, 'foto4.jpg')">
                     <img src="foto4.jpg" alt="Seconda camera" loading="lazy">
                     <span class="gallery-caption">Camera 2</span>
                 </div>
 
-                <div
-                    class="gallery-item"
-                    role="button"
-                    tabindex="0"
+                <div class="gallery-item" role="button" tabindex="0"
                     aria-label="Ingrandisci foto cucina"
                     onclick="openLightbox('foto5.jpg')"
-                    onkeydown="galleryKeydown(event, 'foto5.jpg')"
-                >
+                    onkeydown="galleryKeydown(event, 'foto5.jpg')">
                     <img src="foto5.jpg" alt="Cucina" loading="lazy">
                     <span class="gallery-caption">Cucina</span>
                 </div>
 
-                <div
-                    class="gallery-item"
-                    role="button"
-                    tabindex="0"
+                <div class="gallery-item" role="button" tabindex="0"
                     aria-label="Ingrandisci foto bagno 1"
                     onclick="openLightbox('foto6.jpg')"
-                    onkeydown="galleryKeydown(event, 'foto6.jpg')"
-                >
+                    onkeydown="galleryKeydown(event, 'foto6.jpg')">
                     <img src="foto6.jpg" alt="Bagno" loading="lazy">
                     <span class="gallery-caption">Bagno 1</span>
                 </div>
 
-                <div
-                    class="gallery-item"
-                    role="button"
-                    tabindex="0"
+                <div class="gallery-item" role="button" tabindex="0"
                     aria-label="Ingrandisci foto bagno 2"
                     onclick="openLightbox('foto7.jpg')"
-                    onkeydown="galleryKeydown(event, 'foto7.jpg')"
-                >
+                    onkeydown="galleryKeydown(event, 'foto7.jpg')">
                     <img src="foto7.jpg" alt="Secondo bagno" loading="lazy">
                     <span class="gallery-caption">Bagno 2</span>
                 </div>
 
-                <div
-                    class="gallery-item"
-                    role="button"
-                    tabindex="0"
+                <div class="gallery-item" role="button" tabindex="0"
                     aria-label="Ingrandisci foto balcone 1"
                     onclick="openLightbox('foto8.jpg')"
-                    onkeydown="galleryKeydown(event, 'foto8.jpg')"
-                >
+                    onkeydown="galleryKeydown(event, 'foto8.jpg')">
                     <img src="foto8.jpg" alt="Balcone" loading="lazy">
                     <span class="gallery-caption">Balcone 1</span>
                 </div>
 
-                <div
-                    class="gallery-item"
-                    role="button"
-                    tabindex="0"
+                <div class="gallery-item" role="button" tabindex="0"
                     aria-label="Ingrandisci foto balcone 2"
                     onclick="openLightbox('foto9.jpg')"
-                    onkeydown="galleryKeydown(event, 'foto9.jpg')"
-                >
+                    onkeydown="galleryKeydown(event, 'foto9.jpg')">
                     <img src="foto9.jpg" alt="Secondo balcone" loading="lazy">
                     <span class="gallery-caption">Balcone 2</span>
                 </div>
 
-                <div
-                    class="gallery-item"
-                    role="button"
-                    tabindex="0"
+                <div class="gallery-item" role="button" tabindex="0"
                     aria-label="Ingrandisci dettaglio camera"
                     onclick="openLightbox('foto10.jpg')"
-                    onkeydown="galleryKeydown(event, 'foto10.jpg')"
-                >
+                    onkeydown="galleryKeydown(event, 'foto10.jpg')">
                     <img src="foto10.jpg" alt="Dettaglio camera" loading="lazy">
                     <span class="gallery-caption">Camera 1</span>
                 </div>
 
-                <div
-                    class="gallery-item"
-                    role="button"
-                    tabindex="0"
+                <div class="gallery-item" role="button" tabindex="0"
                     aria-label="Ingrandisci dettaglio cucina"
                     onclick="openLightbox('foto11.jpg')"
-                    onkeydown="galleryKeydown(event, 'foto11.jpg')"
-                >
+                    onkeydown="galleryKeydown(event, 'foto11.jpg')">
                     <img src="foto11.jpg" alt="Dettaglio cucina" loading="lazy">
                     <span class="gallery-caption">Cucina</span>
                 </div>
 
-                <div
-                    class="gallery-item"
-                    role="button"
-                    tabindex="0"
+                <div class="gallery-item" role="button" tabindex="0"
                     aria-label="Ingrandisci piantina della casa"
                     onclick="openLightbox('foto12.jpg')"
-                    onkeydown="galleryKeydown(event, 'foto12.jpg')"
-                >
+                    onkeydown="galleryKeydown(event, 'foto12.jpg')">
                     <img src="foto12.jpg" alt="Piantina della casa" loading="lazy">
                     <span class="gallery-caption">Piantina</span>
                 </div>
@@ -1152,7 +1176,7 @@ footer {
     </div>
 </section>
 
-<!-- PRENOTAZIONE -->
+<!-- PRENOTAZIONE: EMAIL AGGIORNATA -->
 
 <section class="cta" id="prenota">
     <div class="container">
@@ -1169,13 +1193,41 @@ footer {
             Richiedi un preventivo per scoprire i vantaggi.
         </p>
 
-        <a
-            href="mailto:acdomus.roma@gmail.com?subject=Richiesta%20preventivo%20AC%20DOMUS%20ROMA"
-            class="button button-white"
-        >
-            RICHIEDI UN PREVENTIVO
-        </a>
+        <div class="email-contact">
 
+            <span class="email-label">Contattaci via email</span>
+
+            <a
+                href="mailto:acdomus.roma@gmail.com?subject=Richiesta%20preventivo%20AC%20DOMUS%20ROMA"
+                class="email-address"
+            >
+                acdomus.roma@gmail.com
+            </a>
+
+            <div class="email-buttons">
+
+                <a
+                    href="mailto:acdomus.roma@gmail.com?subject=Richiesta%20preventivo%20AC%20DOMUS%20ROMA"
+                    class="button button-white"
+                >
+                    APRI LA POSTA
+                </a>
+
+                <button
+                    type="button"
+                    class="button email-copy"
+                    id="copyEmailButton"
+                >
+                    COPIA INDIRIZZO
+                </button>
+
+            </div>
+
+            <p class="email-note" id="emailFeedback" aria-live="polite">
+                Se la posta non si apre, copia l'indirizzo e scrivici dal tuo servizio email.
+            </p>
+
+        </div>
     </div>
 </section>
 
@@ -1328,7 +1380,33 @@ document.addEventListener("keydown", function(event) {
     }
 });
 
+/* COPIA INDIRIZZO EMAIL */
+
+const copyEmailButton = document.getElementById("copyEmailButton");
+const emailFeedback = document.getElementById("emailFeedback");
+const contactEmail = "acdomus.roma@gmail.com";
+
+copyEmailButton.addEventListener("click", async function() {
+    try {
+        await navigator.clipboard.writeText(contactEmail);
+
+        emailFeedback.textContent =
+            "Indirizzo copiato! Ora puoi incollarlo nella tua email.";
+
+        copyEmailButton.textContent = "INDIRIZZO COPIATO";
+
+        setTimeout(function() {
+            copyEmailButton.textContent = "COPIA INDIRIZZO";
+        }, 2500);
+
+    } catch (error) {
+        emailFeedback.textContent =
+            "Copia manualmente questo indirizzo: " + contactEmail;
+    }
+});
+
 </script>
 
 </body>
 </html>
+```
